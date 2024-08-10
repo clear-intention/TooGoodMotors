@@ -1,0 +1,512 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gilroy';
+}
+
+*::selection {
+    color: rgb(255, 255, 255);
+    background-color: black;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background-color: white;
+}
+
+#nav {
+    height: 100px;
+    width: 100%;
+    /* background-color: burlywood; */
+    position: fixed;
+    z-index: 99;
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+}
+
+#nav #nav-part1 h2 {
+    font-family: futura;
+    background-color: rgb(255, 255, 255);
+    /* display: none; */
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-size: 70px;
+    border-radius: 7.5px;
+    /* left: -5px; */
+}
+
+#nav #nav-part2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    letter-spacing: 0.02em;
+    font-style: italic;
+}
+
+#nav #nav-part2 a:hover {
+    opacity: .5;
+}
+
+#nav-part1 {
+    /* background-color: RED; */
+    height: 100px;
+    overflow: hidden;
+}
+
+#nav-part2 #links a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 14px;
+    margin: 0 20px;
+}
+
+#icons {
+    padding: 10px;
+    border-radius: 50px;
+    background-color: #F7F7F7;
+}
+
+#nav-part2 #icons i {
+    font-size: 18px;
+    margin: 0 20px;
+    font-weight: 100;
+    color: #000;
+}
+
+#nav-part2 #icons i:hover {
+    cursor: pointer;
+    color: #797979;
+}
+
+#nav h1 {
+    font-family: futura;
+    line-height: 32px;
+    display: flex;
+}
+
+#cursor {
+    height: 180px;
+    width: 180px;
+    background-color: rgba(224, 214, 139, 0.814);
+    border-radius: 50%;
+    position: fixed;
+    transform: translate(-50%, -50%) scale(0);
+}
+
+#page1 {
+    min-height: 100vh;
+    /*kamsekam height  denekaleye*/
+    position: relative;
+    width: 100%;
+    /* background-color: aqua; */
+    padding: 0 1vw;
+    padding-top: 30vh;
+}
+
+#page1 h1 {
+    font-size: 30vh;
+    text-transform: uppercase;
+    font-family: futura;
+    line-height: 27vh;
+}
+
+#video-container {
+    height: 100vh;
+    width: 100%;
+    background-color: grey;
+    margin-top: 3vh;
+    position: relative;
+
+}
+
+#video-container video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#video-container #play {
+    padding: 3vw 2vw;
+    background-color: black;
+    color: whitesmoke;
+    font-size: 1.3vw;
+    position: fixed;
+    font-family: futura;
+    border-radius: 50%;
+    opacity: 0;
+    scale: 0;
+}
+
+#video-container #play:hover {
+    cursor: pointer;
+    color: #a0a0a0;
+}
+
+#page2 {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    /* background-color: rgb(255, 25, 25); */
+    display: flex;
+    align-items: center;
+    padding: 3vw 1vw;
+    justify-content: space-between;
+}
+
+#page2 .elem {
+    height: 100%;
+    width: 31%;
+    /* background-color: rgb(255, 25, 25); */
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("mercedes.jpg");
+    background-size: 25vw;
+    background-repeat: no-repeat;
+}
+
+#page2 .elem img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    scale: 1.2;
+
+}
+
+#page2 .elem .dets {
+    height: 50px;
+    border-radius: 50px;
+    width: 70%;
+    position: absolute;
+    z-index: 5;
+    background-color: rgb(225, 198, 166);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#page2 .elem .dets a {
+    text-decoration: none;
+    color: #000000;
+}
+
+#page2 .elem .dets h1 {
+    font-family: futura;
+    font-size: 1.7vw;
+
+}
+
+#page2 .elem .dets:hover {
+    height: 150px;
+    transition: all ease-in-out .6s;
+}
+
+#page2 .elem .dets a:hover {
+    /* cursor: pointer; */
+    color: gray;
+}
+
+.con {
+    white-space: nowrap;
+    display: inline-block;
+    animation-name: move;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes move {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translate(-100%);
+    }
+}
+
+#moving-text::-webkit-scrollbar {
+    display: none;
+}
+
+#moving-text {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+
+
+#moving-text h1 {
+    font-size: 7vw;
+    font-family: futura;
+    display: inline-block;
+
+}
+
+#gola {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: rgb(255, 0, 0);
+    margin: .5vw 2vw;
+}
+
+.element {
+    height: 130px;
+    width: 100%;
+    position: relative;
+    border-bottom: 1px solid rgb(152, 133, 133);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding: 0 2.5vw;
+}
+
+.element h2 {
+    font-size: 50px;
+    font-family: futura;
+    z-index: 1;
+}
+
+.element .overlay {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(255, 192, 76);
+    position: absolute;
+    left: 0;
+    top: -100%;
+    transition: all ease .5s;
+}
+
+.element:hover .overlay {
+    top: 0;
+}
+
+
+#image {
+    height: 30vw;
+    width: 24vw;
+    /* background-color: red; */
+    border-radius: 15px;
+    position: fixed;
+    z-index: 99;
+    left: 50%;
+    top: 25%;
+    display: none;
+    background-size: cover;
+    background-position: center;
+}
+
+#page5 {
+    min-height: 200vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+#page5:hover {
+    cursor: pointer;
+}
+
+.child {
+    height: 54vh;
+    width: 38vw;
+    /* background-color: red; */
+    /* border: 2px solid #000; */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.child img {
+    height: 100%;
+}
+
+.child1 {
+    position: relative;
+    top: 14vw;
+    left: -24vw;
+    font-size: 1.2vw;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+#footer {
+    /* position: fixed; */
+    height: 105vh;
+    width: 100%;
+    background-color: #000000;
+    color: #fff;
+    z-index: 9;
+    bottom: 0;
+    display: flex;
+    /* align-items: flex-end; */
+    justify-content: flex-end;
+    flex-direction: column;
+    padding: 1vw 5vw 3vw;
+
+}
+
+#footer h1 {
+    font-family: futura;
+    font-size: 8.2vw;
+}
+
+#footer-bottom {
+    border-top: 1px solid #dadada;
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#footer-bottom h2 {
+    font-size: 1.3vw;
+}
+
+#footer-bottom h2:hover {
+    cursor: pointer;
+    color: #6c6363;
+}
+
+#footer-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer-img img {
+    width: 20vw;
+    position: relative;
+    top: 30px;
+    z-index: 100;
+}
+
+/* not needed */
+
+#loader {
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    transition: all ease 0.7s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#loader h1 {
+    font-size: 4vw;
+    color: transparent;
+    background: linear-gradient(to right, orange, orangered);
+    -webkit-background-clip: text;
+    position: absolute;
+    opacity: 0;
+    animation-name: load;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+}
+
+@keyframes load {
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@media (max-width:600px) {
+
+    /*for risponsiveness mobile*/
+    #loader h1 {
+        font-size: 9vw;
+
+    }
+}
+
+#hr1 {
+    position: relative;
+    top: 12px;
+}
+
+.hr {
+    border-bottom: 1px solid hwb(0 0% 100%);
+    height: 5vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hr b {
+    font-family: futura;
+    font-size: 1.5vw;
+}
+
+.hr b:hover {
+    cursor: pointer;
+    color: #484848;
+}
+
+.hr img {
+    width: 35%;
+    position: relative;
+    left: 7.2vw;
+    bottom: 15px;
+}
+
+#hr3 {
+    position: relative;
+    top: 12px;
+}
+
+#hr4 {
+    position: relative;
+    top: 12px;
+}
+
+#hr5 {
+    position: relative;
+    top: 12px;
+}
+
+#hr6 {
+    position: relative;
+    top: 12px;
+}
+
+#pagefor1 {
+    height: 100vh;
+}
